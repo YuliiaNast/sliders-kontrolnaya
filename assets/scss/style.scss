@@ -39,8 +39,6 @@ just for appearance; change whatever you want
 */
 
 .slide {
-    font-size: 40px;
-    font-family: cursive;
     padding: 40px;
     box-sizing: border-box;
     background: #333;
@@ -50,21 +48,25 @@ just for appearance; change whatever you want
 .slide:nth-of-type(1) {
     background-image: url(../images/1.jpg);
     background-size: cover;
+    margin: 0 auto;
 }
 
 .slide:nth-of-type(2) {
     background-image: url(../images/2.jpg);
     background-size: cover;
+    margin: 0 auto;
 }
 
 .slide:nth-of-type(3) {
     background-image: url(../images/3.jpg);
-    background-size: contain;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 .slide:nth-of-type(4) {
     background-image: url(../images/4.jpg);
     background-size: cover;
+    margin: 0 auto;
 }
 
 .slide:nth-of-type(5) {
@@ -72,31 +74,38 @@ just for appearance; change whatever you want
     background-size: cover;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-}
-
 .indicators {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    margin: 0 0 15px 0;
-    padding: 0;
-    list-style: none;
+    margin-bottom: 10px;
+  }
+  .indicator {
+    height: 40px;
+    min-width: 40px;
+    display: inline-block;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+  }
+  .indicator.active {
+    background: rgb(71, 2, 2);
+  }
+  .indicators > li {
+    margin-right: 5px;
+  }
   
-  
-}
-
-
-.indicator,
-.control {
-
-display: inline-block;
-padding: 10px 20px;
-background-color: #cccccc;
-cursor: pointer;
-margin-right: 15px;
-user-select: none;
-height: 40px;
-min-width: 40px;
-}
+  .controls {
+    display: flex;
+    justify-content: center;
+  }
+  .control {
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-right: 15px;
+    user-select: none;
+  }
